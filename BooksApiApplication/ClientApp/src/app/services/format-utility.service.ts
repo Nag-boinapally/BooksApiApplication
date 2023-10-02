@@ -106,27 +106,6 @@ export class UtilityService {
     }
     return '#' + color;
   }
-  public RemoveBadChars(InStr: string) {
-    InStr = InStr.replace(/\</g, "");
-    InStr = InStr.replace(/\>/g, "");
-    InStr = InStr.replace(/\"/g, "");
-    InStr = InStr.replace(/\'/g, "");
-    InStr = InStr.replace(/\%/g, "");
-    InStr = InStr.replace(/\;/g, "");
-    InStr = InStr.replace(/\(/g, "");
-    InStr = InStr.replace(/\)/g, "");
-    InStr = InStr.replace(/\&/g, "");
-    InStr = InStr.replace(/\+/g, "");
-    return InStr;
-  }
 
-  public FormatCurrency(inputString: number)
-  {
-    let formatter = new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    });
 
-    return formatter.format(inputString);
-  }
 }
