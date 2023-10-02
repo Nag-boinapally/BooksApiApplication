@@ -105,6 +105,7 @@ export class UtilityService {
       color = color.replace(/^#?([\da-f])([\da-f])([\da-f])$/i, '$1$1$2$2$3$3');
     }
     return '#' + color;
+
   }
 
   public RemoveBadChars(InStr: string) {
