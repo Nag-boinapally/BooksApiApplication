@@ -107,5 +107,18 @@ export class UtilityService {
     return '#' + color;
   }
 
+  public RemoveBadChars(InStr: string) {
+    InStr = InStr.replace(/\</g, "");
+    InStr = InStr.replace(/\>/g, "");
+    InStr = InStr.replace(/\"/g, "");
+    InStr = InStr.replace(/\'/g, "");
+    InStr = InStr.replace(/\%/g, "");
+    InStr = InStr.replace(/\;/g, "");
+    InStr = InStr.replace(/\(/g, "");
+    InStr = InStr.replace(/\)/g, "");
+    InStr = InStr.replace(/\&/g, "");
+    InStr = InStr.replace(/\+/g, "");
+    return InStr;
+  }
 
 }
